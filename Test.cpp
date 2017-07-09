@@ -27,3 +27,10 @@ TEST(BG, OneRollIsStrike){
 	gm.roll(10);
 	LONGS_EQUAL(0, gm.getScore());
 }
+
+TEST(BG, OneRollIsStrikeThenRegularRoll){
+	Game gm;
+	gm.roll(10);
+	gm.roll(3);
+	LONGS_EQUAL(16, gm.getScore());
+}
