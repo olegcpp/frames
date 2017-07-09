@@ -2,23 +2,28 @@
 #include <memory>
 #include "game.h"
 
-
-TEST_GROUP(BowlingGame) {
+TEST_GROUP(BG) {
 };
 
-TEST(BowlingGame, ScoreGameWithNoRolls) {
+TEST(BG, ScoreGameWithNoRolls) {
 	Game gm;
-	CHECK_TRUE(gm.getScore() == 0);
+	LONGS_EQUAL(gm.getScore(), 0);
 }
 
-TEST(BowlingGame, RollZeroPins) {
+TEST(BG, RollZeroPins) {
 	Game gm;
 	gm.roll(0);
-	CHECK_TRUE(gm.getScore() == 0);
+	LONGS_EQUAL(gm.getScore(), 0);
 }
 
-TEST(BowlingGame, RollOnePin) {
+TEST(BG, RollOnePin) {
 	Game gm;
 	gm.roll(1);
-	CHECK_EQUAL(1, gm.getScore());
+	LONGS_EQUAL(1, gm.getScore());
+}
+
+TEST(BG, OneRollIsStrike){
+	Game gm;
+	gm.roll(10);
+	LONGS_EQUAL(0, gm.getScore());
 }

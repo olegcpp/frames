@@ -12,14 +12,14 @@
 class Game {
 public:
 	Game()
-	: currentScore(0) {}
-	int getScore() {return currentScore;}
-	void roll(int pins){
-		currentScore += pins;
-	};
+	: currentScore(0), haveStrike(false) {}
 
+	int getScore() { return currentScore; }
+
+	void roll(int pins);
 private:
 	int currentScore;
+	bool haveStrike;
 };
 
 #endif /* GAME_H_ */
