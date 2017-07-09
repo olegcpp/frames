@@ -13,6 +13,10 @@ void Game::roll(int pins){
 			haveStrike = true;
 			addedScore = 0;
 		}
+		else if (haveStrike)
+		{
+			addedScore = 10 + 2*pins;
+		}
 		else
 		{
 			addedScore = pins;
