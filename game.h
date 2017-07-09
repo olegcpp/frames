@@ -7,12 +7,11 @@
 
 #ifndef GAME_H_
 #define GAME_H_
-
+#include <iostream>
 
 class Game {
 public:
-	Game()
-	: currentScore(0), haveStrike(false) {}
+	Game();
 
 	int getScore() { return currentScore; }
 
@@ -20,6 +19,8 @@ public:
 private:
 	int currentScore;
 	bool haveStrike;
+	bool isFirstRollInFrame;
+//	bool scoreOfFirstRollInFrame;
 };
 
 #endif /* GAME_H_ */
