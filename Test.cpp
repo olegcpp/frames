@@ -34,3 +34,10 @@ TEST(BG, OneRollIsStrikeThenRegularRoll){
 	gm.roll(3);
 	LONGS_EQUAL(16, gm.getScore());
 }
+TEST(BG, OneRollIsStrikeThenTwoRegularRolls){
+	Game gm;
+	gm.roll(10);
+	gm.roll(3);
+	gm.roll(1);
+	LONGS_EQUAL(18, gm.getScore());
+}
