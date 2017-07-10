@@ -1,8 +1,3 @@
-/* * game.cpp
- *
- *  Created on: Jul 9, 2017
- *      Author: oleg
- */
 #include <iostream>
 #include "game.h"
 

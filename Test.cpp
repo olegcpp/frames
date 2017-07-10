@@ -32,7 +32,7 @@ TEST(BG, OneRollIsStrikeThenRegularRoll){
 	Game gm;
 	gm.roll(10);
 	gm.roll(3);
-	LONGS_EQUAL(16, gm.getScore());
+	LONGS_EQUAL(0, gm.getScore());
 }
 
 TEST(BG, OneRollIsStrikeThenTwoRegularRolls){
@@ -63,4 +63,12 @@ TEST(BG, RegularFrameStrikeFrameRegularFrame){
 	LONGS_EQUAL(28, gm.getScore());
 }
 
+TEST(BG, TwoStrikesAndRegularFrame){
+	Game gm;
+	gm.roll(10);//23
+	gm.roll(10);//15
+	gm.roll(3);
+	gm.roll(2);//5
+	LONGS_EQUAL(43, gm.getScore());
+}
 
