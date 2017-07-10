@@ -52,3 +52,15 @@ TEST(BG, TwoRegularFrames){
 	LONGS_EQUAL(13, gm.getScore());
 }
 
+TEST(BG, RegularFrameStrikeFrameRegularFrame){
+	Game gm;
+	gm.roll(3);
+	gm.roll(1);
+	gm.roll(10);
+	gm.roll(5);
+	gm.roll(2);
+
+	LONGS_EQUAL(28, gm.getScore());
+}
+
+

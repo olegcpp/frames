@@ -14,7 +14,7 @@ Game::Game()
 
 void Game::roll(int pins) {
 	using namespace std;
-	cout << pins << ", " << isFirstRollInFrame << ", " << haveStrike << endl;
+//	cout << pins << ", " << isFirstRollInFrame << ", " << haveStrike << endl;
 		int addedScore = 0 ;
 		if (10 == pins)
 		{
